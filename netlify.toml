@@ -1,0 +1,23 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Force https first — Netlify issues the certificate automatically once the
+# domain's DNS points at Netlify (Domain settings → HTTPS → Verify DNS).
+[[redirects]]
+  from = "http://almakani.islahululoom.in/*"
+  to = "https://almakani.islahululoom.in/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.almakani.islahululoom.in/*"
+  to = "https://almakani.islahululoom.in/:splat"
+  status = 301
+  force = true
+
+# SPA fallback — every other path is handled by the client router.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

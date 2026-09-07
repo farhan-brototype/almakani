@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /team
+Disallow: /login
+Disallow: /registration
+Disallow: /settings
+
+Host: https://almakani.islahululoom.in
+Sitemap: https://almakani.islahululoom.in/sitemap.xml
