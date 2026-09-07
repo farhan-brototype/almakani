@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1788178735894,
+      "tag": "0000_add_logo_and_stage_minimums",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1788178779342,
+      "tag": "0001_branding_bucket_policy",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1788180893156,
+      "tag": "0002_manual_result_override",
+      "breakpoints": true
+    }
+  ]
+}
