@@ -282,11 +282,11 @@
 .hero-mobile-dune-middle { bottom: 0; width: 172%; left: -36%; z-index: 5; }
 .hero-mobile-dune-front { bottom: 0; width: 172%; left: -36%; z-index: 7; }
 .hero-mobile-dune-floor { bottom: 0; width: 172%; left: -36%; z-index: 10; }
-.hero-mobile-tent-brown { z-index: 3; left: 24%; bottom: 13%; width: 21%; animation-delay: -3.7s; }
+.hero-mobile-tent-brown { z-index: 3; left: 30%; bottom: 13%; width: 21%; animation-delay: -3.7s; }
 .hero-mobile-tent-blue { z-index: 6; right: 5%; bottom: 8%; width: 28%; animation-delay: -2.3s; }
-.hero-mobile-tent-red { z-index: 9; left: 5%; bottom: 2.5%; width: 38%; animation-delay: -1.1s; }
-.hero-mobile-tent-yellow { z-index: 12; right: 9%; bottom: -3%; width: 49%; animation-delay: -4.4s; }
-.hero-live-logo-mobile { top: 24%; width: 35%; padding: 2%; }
+.hero-mobile-tent-red { z-index: 9; left: 1%; bottom: 2.5%; width: 38%; animation-delay: -1.1s; }
+.hero-mobile-tent-yellow { z-index: 12; right: 14%; bottom: -3%; width: 49%; animation-delay: -4.4s; }
+.hero-live-logo-mobile { top: 24%; width: 42%; padding: 2%; }
 @keyframes hero-cloud-drift { 0%, 100% { transform: translate3d(-1.2%, 0, 0); } 50% { transform: translate3d(1.2%, -7%, 0); } }
 @keyframes hero-palm-breeze { 0%, 100% { transform: rotate(-1.7deg); } 50% { transform: rotate(2deg); } }
 @keyframes hero-palm-breeze-flip { 0%, 100% { transform: scaleX(-1) rotate(-1.7deg); } 50% { transform: scaleX(-1) rotate(2deg); } }
@@ -531,9 +531,13 @@
     scroll-behavior: smooth;
   }
 
-  /* Custom scroll-rotating pointer — hide the native cursor on mice only */
+  /* Custom scroll-rotating pointer — hide the native cursor completely on mice */
   @media (pointer: fine) {
+    *,
+    *::before,
+    *::after,
     html,
+    body,
     a,
     button,
     [role="button"],
@@ -542,7 +546,7 @@
     select,
     input,
     textarea {
-      cursor: none;
+      cursor: none !important;
     }
   }
 
@@ -723,3 +727,24 @@
     transform: translate(calc(-50% + 6px), -380px) scale(3.4) rotate(-3deg);
   }
 }
+
+.perspective-1000 {
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+
