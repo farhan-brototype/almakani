@@ -108,19 +108,31 @@ export function PublicShell({
           children
         )}
       </main>
-      <footer className="border-t border-border/60 py-8">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 text-xs text-muted-foreground sm:flex-row">
-          <p>
-            © {new Date().getFullYear()} {FEST.college} · {FEST.name}
+      <footer
+        className="relative border-t border-[#c88d51]/20 py-8 text-primary-foreground"
+        style={{ backgroundColor: "#1c110a" }}
+      >
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-10"
+          style={{
+            background:
+              "radial-gradient(40rem 20rem at 50% 0%, rgba(249, 115, 22, 0.08), transparent 70%)",
+          }}
+        />
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 text-xs text-[#d4bca7]/80 sm:flex-row">
+          <p className="font-medium">
+            © {new Date().getFullYear()} {FEST.college} ·{" "}
+            <span className="text-[#ff7826] font-semibold">{FEST.name}</span>
           </p>
-          <div className="flex gap-4">
-            <Link to="/schedule" className="hover:text-foreground">
+          <div className="flex gap-5">
+            <Link to="/schedule" className="transition-colors hover:text-[#ffa347]">
               Schedule
             </Link>
-            <Link to="/documents" className="hover:text-foreground">
+            <Link to="/documents" className="transition-colors hover:text-[#ffa347]">
               Documents
             </Link>
-            <Link to="/results" className="hover:text-foreground">
+            <Link to="/results" className="transition-colors hover:text-[#ffa347]">
               Results
             </Link>
           </div>
